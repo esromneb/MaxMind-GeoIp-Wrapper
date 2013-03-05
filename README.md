@@ -9,7 +9,7 @@ Help
 =
 Please fork and:  
  - Cache all returned data  
- - Invalidate cache in IP mismatch
+ - Invalidate cache if cached data and current IP mismatch
 
 License
 =
