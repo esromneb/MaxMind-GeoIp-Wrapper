@@ -8,11 +8,11 @@
 
 
 var GeoIpWrapper = function () {
-    this.loc = {default:{}};
-    this.loc.default.latitude = '37.5630';
-    this.loc.default.longitude = '-122.3255';
-    this.loc.latitude = this.loc.default.latitude;
-    this.loc.longitude = this.loc.default.longitude;
+    this.loc = {defaults:{}};
+    this.loc.defaults.latitude = '37.5630';
+    this.loc.defaults.longitude = '-122.3255';
+    this.loc.latitude = this.loc.defaults.latitude;
+    this.loc.longitude = this.loc.defaults.longitude;
 
 };
 
@@ -132,8 +132,8 @@ GeoIpWrapper.prototype.parse_js_file = function () {
         console.log("exception calling functions after js file loaded: " + e);
 
         // set to default, but don't set cookie
-        this.loc.latitude = this.loc.default.latitude;
-        this.loc.longitude = this.loc.default.longitude;
+        this.loc.latitude = this.loc.defaults.latitude;
+        this.loc.longitude = this.loc.defaults.longitude;
     }
 
     // Callback
